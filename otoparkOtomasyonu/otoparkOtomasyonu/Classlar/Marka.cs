@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace otoparkOtomasyonu.Classlar
 {
-     class Marka
+    class Marka
     {
         public int ID { get; set; }
-        [Column(TypeName ="varchar")]
+        [Column(TypeName = "varchar")]
         [StringLength(70)]
         public String MarkaAdi { get; set; }
-        public virtual ICollection<Seri> seri { get; set; } //tablo ilişkilendirme
-        public virtual ICollection<AracParkBilgileri> AracParkBilgileris { get; set; } 
+        public virtual ICollection<Seri> seri { get; set; }
+        public virtual ICollection<AracParkBilgileri> AracParkBilgileris { get; set; }
 
 
 

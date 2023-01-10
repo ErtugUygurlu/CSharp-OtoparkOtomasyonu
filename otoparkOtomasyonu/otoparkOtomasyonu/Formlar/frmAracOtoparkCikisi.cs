@@ -19,7 +19,7 @@ namespace otoparkOtomasyonu.Formlar
         }
         OtoparkDBContext db = new OtoparkDBContext();
 
-        void UcretHesapla() 
+        void UcretHesapla()
         {
             try
             {
@@ -27,20 +27,20 @@ namespace otoparkOtomasyonu.Formlar
                 TimeSpan fark;
                 fark = DateTime.Parse(cikisLbl.Text) - DateTime.Parse(girisLbl.Text);
                 decimal saatucreti = 0, sure = 0, tutar = 0;
-                surelbl.Text=fark.TotalHours.ToString("0.00");
+                surelbl.Text = fark.TotalHours.ToString("0.00");
                 saatucreti = decimal.Parse(saatucretiCb.Text);
                 sure = decimal.Parse(surelbl.Text);
                 tutar = sure * saatucreti;
-                ucretlbl.Text=tutar.ToString("0.00");
+                ucretlbl.Text = tutar.ToString("0.00");
             }
             catch (Exception)
             {
 
-                
+
             }
         }
-        private void frmAracOtoparkCikisi_Load(object sender, EventArgs e) 
-           
+        private void frmAracOtoparkCikisi_Load(object sender, EventArgs e)
+
         {
             saatucretiCb.SelectedIndex = 0;
             var plakagetir = db.TBLAracParkBilgileri.ToList();
@@ -148,28 +148,28 @@ namespace otoparkOtomasyonu.Formlar
 
         private void musteriidTxt_TextChanged(object sender, EventArgs e)
         {
-            
+
 
             #region MusteriID_ara
             var MusteriIDara = (from x in db.TBLAracParkBilgileri
-                         join y in db.TBLMarka on
-                       x.MarkaID equals y.ID
-                         join z in db.TBLSeri on x.SeriID equals z.ID
-                         join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
-                         select new
-                         {
-                             x.ID,
-                             x.MusteriID,
-                             x.AdiSoyadi,
-                             x.Telefon,
-                             x.Plaka,
-                             x.Renk,
-                             x.Aciklama,
-                             x.GirisTarihi,
-                             y.MarkaAdi,
-                             z.seri,
-                             w.ParkYerleri
-                         }).Where(ara => ara.MarkaAdi.ToString() == IDaratxt.Text).ToList();
+                                join y in db.TBLMarka on
+                              x.MarkaID equals y.ID
+                                join z in db.TBLSeri on x.SeriID equals z.ID
+                                join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
+                                select new
+                                {
+                                    x.ID,
+                                    x.MusteriID,
+                                    x.AdiSoyadi,
+                                    x.Telefon,
+                                    x.Plaka,
+                                    x.Renk,
+                                    x.Aciklama,
+                                    x.GirisTarihi,
+                                    y.MarkaAdi,
+                                    z.seri,
+                                    w.ParkYerleri
+                                }).Where(ara => ara.MarkaAdi.ToString() == IDaratxt.Text).ToList();
 
             foreach (var item in MusteriIDara)
             {
@@ -207,24 +207,24 @@ namespace otoparkOtomasyonu.Formlar
 
             #region Adsoyad_ara
             var AdSoyadara = (from x in db.TBLAracParkBilgileri
-                                 join y in db.TBLMarka on
-                               x.MarkaID equals y.ID
-                                 join z in db.TBLSeri on x.SeriID equals z.ID
-                                 join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
-                                 select new
-                                 {
-                                     x.ID,
-                                     x.MusteriID,
-                                     x.AdiSoyadi,
-                                     x.Telefon,
-                                     x.Plaka,
-                                     x.Renk,
-                                     x.Aciklama,
-                                     x.GirisTarihi,
-                                     y.MarkaAdi,
-                                     z.seri,
-                                     w.ParkYerleri
-                                 }).Where(ara => ara.AdiSoyadi.ToString() == adsoyadaraTxt.Text).ToList();
+                              join y in db.TBLMarka on
+                            x.MarkaID equals y.ID
+                              join z in db.TBLSeri on x.SeriID equals z.ID
+                              join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
+                              select new
+                              {
+                                  x.ID,
+                                  x.MusteriID,
+                                  x.AdiSoyadi,
+                                  x.Telefon,
+                                  x.Plaka,
+                                  x.Renk,
+                                  x.Aciklama,
+                                  x.GirisTarihi,
+                                  y.MarkaAdi,
+                                  z.seri,
+                                  w.ParkYerleri
+                              }).Where(ara => ara.AdiSoyadi.ToString() == adsoyadaraTxt.Text).ToList();
 
             foreach (var item in AdSoyadara)
             {
@@ -247,27 +247,27 @@ namespace otoparkOtomasyonu.Formlar
 
         private void plakaaraCb_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
             #region Plaka_ara
             var Plakaara = (from x in db.TBLAracParkBilgileri
-                                 join y in db.TBLMarka on
-                               x.MarkaID equals y.ID
-                                 join z in db.TBLSeri on x.SeriID equals z.ID
-                                 join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
-                                 select new
-                                 {
-                                     x.ID,
-                                     x.MusteriID,
-                                     x.AdiSoyadi,
-                                     x.Telefon,
-                                     x.Plaka,
-                                     x.Renk,
-                                     x.Aciklama,
-                                     x.GirisTarihi,
-                                     y.MarkaAdi,
-                                     z.seri,
-                                     w.ParkYerleri
-                                 }).Where(ara => ara.Plaka.ToString() == plakaaraCb.Text).ToList();
+                            join y in db.TBLMarka on
+                          x.MarkaID equals y.ID
+                            join z in db.TBLSeri on x.SeriID equals z.ID
+                            join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
+                            select new
+                            {
+                                x.ID,
+                                x.MusteriID,
+                                x.AdiSoyadi,
+                                x.Telefon,
+                                x.Plaka,
+                                x.Renk,
+                                x.Aciklama,
+                                x.GirisTarihi,
+                                y.MarkaAdi,
+                                z.seri,
+                                w.ParkYerleri
+                            }).Where(ara => ara.Plaka.ToString() == plakaaraCb.Text).ToList();
 
             foreach (var item in Plakaara)
             {
@@ -290,27 +290,27 @@ namespace otoparkOtomasyonu.Formlar
 
         private void parkyeriaraCb_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
             #region PlakaYeri_ara
             var Plakayeriara = (from x in db.TBLAracParkBilgileri
-                                 join y in db.TBLMarka on
-                               x.MarkaID equals y.ID
-                                 join z in db.TBLSeri on x.SeriID equals z.ID
-                                 join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
-                                 select new
-                                 {
-                                     x.ID,
-                                     x.MusteriID,
-                                     x.AdiSoyadi,
-                                     x.Telefon,
-                                     x.Plaka,
-                                     x.Renk,
-                                     x.Aciklama,
-                                     x.GirisTarihi,
-                                     y.MarkaAdi,
-                                     z.seri,
-                                     w.ParkYerleri
-                                 }).Where(ara => ara.ParkYerleri.ToString() == parkyeriaraCb.Text).ToList();
+                                join y in db.TBLMarka on
+                              x.MarkaID equals y.ID
+                                join z in db.TBLSeri on x.SeriID equals z.ID
+                                join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
+                                select new
+                                {
+                                    x.ID,
+                                    x.MusteriID,
+                                    x.AdiSoyadi,
+                                    x.Telefon,
+                                    x.Plaka,
+                                    x.Renk,
+                                    x.Aciklama,
+                                    x.GirisTarihi,
+                                    y.MarkaAdi,
+                                    z.seri,
+                                    w.ParkYerleri
+                                }).Where(ara => ara.ParkYerleri.ToString() == parkyeriaraCb.Text).ToList();
 
             foreach (var item in Plakayeriara)
             {
@@ -385,7 +385,7 @@ namespace otoparkOtomasyonu.Formlar
             this.Close();
         }
 
-        private void silBtn_Click(object sender, EventArgs e) 
+        private void silBtn_Click(object sender, EventArgs e)
         {
             #region sil
             KayıtSil();
@@ -443,7 +443,7 @@ namespace otoparkOtomasyonu.Formlar
             girisLbl.Text = DateTime.Now.ToString();
             cikisLbl.Text = DateTime.Now.ToString();
         }
-    
+
         private void araccikisBtn_Click(object sender, EventArgs e)
         {
             #region araccikisi
@@ -459,7 +459,7 @@ namespace otoparkOtomasyonu.Formlar
             ekle.Renk = renkTxt.Text;
             ekle.ParkYeriID = int.Parse(parkyeriaraCb.ValueMember);
             ekle.saatUcreti = decimal.Parse(saatucretiCb.Text);
-            ekle.Sure = decimal.Parse( surelbl.Text);
+            ekle.Sure = decimal.Parse(surelbl.Text);
             ekle.Tutar = decimal.Parse(ucretlbl.Text);
             ekle.Aciklama = aciklamaTxt.Text;
             ekle.GirisTarihi = DateTime.Parse(girisLbl.Text);
@@ -476,7 +476,7 @@ namespace otoparkOtomasyonu.Formlar
             KayıtSil();
             surelbl.Text = "0.00";
             ucretlbl.Text = "0.00";
-            girisLbl.Text=DateTime.Now.ToString();
+            girisLbl.Text = DateTime.Now.ToString();
             cikisLbl.Text = DateTime.Now.ToString();
 
         }
@@ -486,7 +486,7 @@ namespace otoparkOtomasyonu.Formlar
             UcretHesapla();
         }
 
-        private void guncelleBtn_Click(object sender, EventArgs e) 
+        private void guncelleBtn_Click(object sender, EventArgs e)
         {
             var guncelle = db.TBLAracParkBilgileri.FirstOrDefault(x => x.ID.ToString() == idTxt.Text);
             guncelle.MarkaID = (int)markaCb.SelectedValue;
@@ -519,24 +519,24 @@ namespace otoparkOtomasyonu.Formlar
 
             #region MusteriID_ara
             var MusteeriIDara = (from x in db.TBLAracParkBilgileri
-                         join y in db.TBLMarka on
-                       x.MarkaID equals y.ID
-                         join z in db.TBLSeri on x.SeriID equals z.ID
-                         join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
-                         select new
-                         {
-                             x.ID,
-                             x.MusteriID,
-                             x.AdiSoyadi,
-                             x.Telefon,
-                             x.Plaka,
-                             x.Renk,
-                             x.Aciklama,
-                             x.GirisTarihi,
-                             y.MarkaAdi,
-                             z.seri,
-                             w.ParkYerleri
-                         }).Where(ara => ara.MusteriID.ToString() == musteriidaraTxt.Text).ToList();
+                                 join y in db.TBLMarka on
+                               x.MarkaID equals y.ID
+                                 join z in db.TBLSeri on x.SeriID equals z.ID
+                                 join w in db.TBLAracParkYerleri on x.ParkYeriID equals w.ID
+                                 select new
+                                 {
+                                     x.ID,
+                                     x.MusteriID,
+                                     x.AdiSoyadi,
+                                     x.Telefon,
+                                     x.Plaka,
+                                     x.Renk,
+                                     x.Aciklama,
+                                     x.GirisTarihi,
+                                     y.MarkaAdi,
+                                     z.seri,
+                                     w.ParkYerleri
+                                 }).Where(ara => ara.MusteriID.ToString() == musteriidaraTxt.Text).ToList();
 
             foreach (var item in MusteeriIDara)
             {

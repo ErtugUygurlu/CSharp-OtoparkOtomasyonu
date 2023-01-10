@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace otoparkOtomasyonu.Classlar
 {
-     class Satis
+    class Satis
     {
         public int ID { get; set; }
         public int SatisID { get; set; }

@@ -159,7 +159,6 @@
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Park Yeri Ara";
-            //this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -169,7 +168,6 @@
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Plaka Ara";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -179,7 +177,6 @@
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ad Soyad Ara";
-            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -189,7 +186,6 @@
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Müşteri ID Ara";
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -199,7 +195,6 @@
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Ara";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // islemlerPnl
             // 

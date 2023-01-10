@@ -17,6 +17,6 @@ namespace otoparkOtomasyonu.Classlar
         [Column(TypeName = "varchar")]
         [StringLength(70)]
         public string Durumu { get; set; }
-        public virtual  ICollection<AracParkBilgileri> AracParkBilgileri { get; set; }
+        public virtual ICollection<AracParkBilgileri> AracParkBilgileri { get; set; }
     }
 }

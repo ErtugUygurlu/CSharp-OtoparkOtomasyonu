@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace otoparkOtomasyonu.Classlar
 {
-    class OtoparkDBContext: DbContext
+    class OtoparkDBContext : DbContext
     {
         public DbSet<Marka> TBLMarka { get; set; }
         public DbSet<Seri> TBLSeri { get; set; }
@@ -17,7 +17,7 @@ namespace otoparkOtomasyonu.Classlar
         public DbSet<AracParkBilgileri> TBLAracParkBilgileri { get; set; }
         public DbSet<Satis> TBLSatis { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder) //tablo silinirse ilişkili tabloda silinir
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }

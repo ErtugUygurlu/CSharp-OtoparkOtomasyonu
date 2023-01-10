@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(anaSayfa));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mşüşterilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.muşteriEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.müşteriDüzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.araçlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otoparkGirişiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.araçOtoparkÇıkışıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +52,6 @@
             this.aracotoparkcıkısıBtn = new System.Windows.Forms.Button();
             this.aracotoparkgirisiBtn = new System.Windows.Forms.Button();
             this.musterilisteleBtn = new System.Windows.Forms.Button();
-            this.musteriekleBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -66,7 +62,6 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mşüşterilerToolStripMenuItem,
             this.araçlarToolStripMenuItem,
             this.ayarlarToolStripMenuItem,
             this.satışToolStripMenuItem,
@@ -80,29 +75,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1247, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            //this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // mşüşterilerToolStripMenuItem
-            // 
-            this.mşüşterilerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.muşteriEkleToolStripMenuItem,
-            this.müşteriDüzenleToolStripMenuItem});
-            this.mşüşterilerToolStripMenuItem.Name = "mşüşterilerToolStripMenuItem";
-            this.mşüşterilerToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.mşüşterilerToolStripMenuItem.Text = "Müşteriler";
-            // 
-            // muşteriEkleToolStripMenuItem
-            // 
-            this.muşteriEkleToolStripMenuItem.Name = "muşteriEkleToolStripMenuItem";
-            this.muşteriEkleToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.muşteriEkleToolStripMenuItem.Text = "Muşteri Ekle";
-            //this.muşteriEkleToolStripMenuItem.Click += new System.EventHandler(this.muşteriEkleToolStripMenuItem_Click);
-            // 
-            // müşteriDüzenleToolStripMenuItem
-            // 
-            this.müşteriDüzenleToolStripMenuItem.Name = "müşteriDüzenleToolStripMenuItem";
-            this.müşteriDüzenleToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.müşteriDüzenleToolStripMenuItem.Text = "Müşteri Düzenle";
             // 
             // araçlarToolStripMenuItem
             // 
@@ -116,14 +88,14 @@
             // otoparkGirişiToolStripMenuItem
             // 
             this.otoparkGirişiToolStripMenuItem.Name = "otoparkGirişiToolStripMenuItem";
-            this.otoparkGirişiToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.otoparkGirişiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.otoparkGirişiToolStripMenuItem.Text = "Araç Otopark Girişi";
             this.otoparkGirişiToolStripMenuItem.Click += new System.EventHandler(this.otoparkGirişiToolStripMenuItem_Click);
             // 
             // araçOtoparkÇıkışıToolStripMenuItem
             // 
             this.araçOtoparkÇıkışıToolStripMenuItem.Name = "araçOtoparkÇıkışıToolStripMenuItem";
-            this.araçOtoparkÇıkışıToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.araçOtoparkÇıkışıToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.araçOtoparkÇıkışıToolStripMenuItem.Text = "Araç Otopark Çıkışı";
             this.araçOtoparkÇıkışıToolStripMenuItem.Click += new System.EventHandler(this.araçOtoparkÇıkışıToolStripMenuItem_Click);
             // 
@@ -188,7 +160,6 @@
             this.saatToolStripMenuItem.Name = "saatToolStripMenuItem";
             this.saatToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.saatToolStripMenuItem.Text = "Saat";
-            //this.saatToolStripMenuItem.Click += new System.EventHandler(this.saatToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -200,7 +171,6 @@
             this.panel1.Controls.Add(this.aracotoparkcıkısıBtn);
             this.panel1.Controls.Add(this.aracotoparkgirisiBtn);
             this.panel1.Controls.Add(this.musterilisteleBtn);
-            this.panel1.Controls.Add(this.musteriekleBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
@@ -214,7 +184,7 @@
             this.satisBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.satisBtn.ImageKey = "Custom-Icon-Design-Pretty-Office-11-Sale.ico";
             this.satisBtn.ImageList = this.ımageList1;
-            this.satisBtn.Location = new System.Drawing.Point(761, 13);
+            this.satisBtn.Location = new System.Drawing.Point(718, 14);
             this.satisBtn.Name = "satisBtn";
             this.satisBtn.Size = new System.Drawing.Size(152, 64);
             this.satisBtn.TabIndex = 2;
@@ -245,7 +215,7 @@
             this.seriBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.seriBtn.ImageKey = "Aha-Soft-Software-Reports.ico";
             this.seriBtn.ImageList = this.ımageList1;
-            this.seriBtn.Location = new System.Drawing.Point(1065, 13);
+            this.seriBtn.Location = new System.Drawing.Point(1064, 14);
             this.seriBtn.Name = "seriBtn";
             this.seriBtn.Size = new System.Drawing.Size(152, 64);
             this.seriBtn.TabIndex = 2;
@@ -261,7 +231,7 @@
             this.markaBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.markaBtn.ImageKey = "Iconshock-Real-Vista-Business-Brand.ico";
             this.markaBtn.ImageList = this.ımageList1;
-            this.markaBtn.Location = new System.Drawing.Point(913, 13);
+            this.markaBtn.Location = new System.Drawing.Point(891, 14);
             this.markaBtn.Name = "markaBtn";
             this.markaBtn.Size = new System.Drawing.Size(152, 64);
             this.markaBtn.TabIndex = 2;
@@ -277,7 +247,7 @@
             this.otoparkyerleriBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.otoparkyerleriBtn.ImageKey = "Icons8-Windows-8-Household-Garage.ico";
             this.otoparkyerleriBtn.ImageList = this.ımageList1;
-            this.otoparkyerleriBtn.Location = new System.Drawing.Point(609, 13);
+            this.otoparkyerleriBtn.Location = new System.Drawing.Point(545, 14);
             this.otoparkyerleriBtn.Name = "otoparkyerleriBtn";
             this.otoparkyerleriBtn.Size = new System.Drawing.Size(152, 64);
             this.otoparkyerleriBtn.TabIndex = 2;
@@ -293,7 +263,7 @@
             this.aracotoparkcıkısıBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.aracotoparkcıkısıBtn.ImageKey = "Yohproject-Cute-Cancel.ico";
             this.aracotoparkcıkısıBtn.ImageList = this.ımageList1;
-            this.aracotoparkcıkısıBtn.Location = new System.Drawing.Point(457, 13);
+            this.aracotoparkcıkısıBtn.Location = new System.Drawing.Point(372, 14);
             this.aracotoparkcıkısıBtn.Name = "aracotoparkcıkısıBtn";
             this.aracotoparkcıkısıBtn.Size = new System.Drawing.Size(152, 64);
             this.aracotoparkcıkısıBtn.TabIndex = 2;
@@ -309,7 +279,7 @@
             this.aracotoparkgirisiBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.aracotoparkgirisiBtn.ImageKey = "Itzikgur-My-Seven-Travel-BMV.ico";
             this.aracotoparkgirisiBtn.ImageList = this.ımageList1;
-            this.aracotoparkgirisiBtn.Location = new System.Drawing.Point(305, 13);
+            this.aracotoparkgirisiBtn.Location = new System.Drawing.Point(199, 14);
             this.aracotoparkgirisiBtn.Name = "aracotoparkgirisiBtn";
             this.aracotoparkgirisiBtn.Size = new System.Drawing.Size(152, 64);
             this.aracotoparkgirisiBtn.TabIndex = 2;
@@ -325,30 +295,14 @@
             this.musterilisteleBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.musterilisteleBtn.ImageKey = "Webalys-Kameleon.pics-Checklist.ico";
             this.musterilisteleBtn.ImageList = this.ımageList1;
-            this.musterilisteleBtn.Location = new System.Drawing.Point(153, 13);
+            this.musterilisteleBtn.Location = new System.Drawing.Point(26, 14);
             this.musterilisteleBtn.Name = "musterilisteleBtn";
             this.musterilisteleBtn.Size = new System.Drawing.Size(152, 64);
             this.musterilisteleBtn.TabIndex = 2;
-            this.musterilisteleBtn.Text = "Müşteri Listele";
+            this.musterilisteleBtn.Text = "Müşteri Ekle ve Listele";
             this.musterilisteleBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.musterilisteleBtn.UseVisualStyleBackColor = true;
             this.musterilisteleBtn.Click += new System.EventHandler(this.musterilisteleBtn_Click);
-            // 
-            // musteriekleBtn
-            // 
-            this.musteriekleBtn.FlatAppearance.BorderSize = 0;
-            this.musteriekleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.musteriekleBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.musteriekleBtn.ImageKey = "Oxygen-Icons.org-Oxygen-Actions-list-add-user.ico";
-            this.musteriekleBtn.ImageList = this.ımageList1;
-            this.musteriekleBtn.Location = new System.Drawing.Point(1, 13);
-            this.musteriekleBtn.Name = "musteriekleBtn";
-            this.musteriekleBtn.Size = new System.Drawing.Size(152, 64);
-            this.musteriekleBtn.TabIndex = 2;
-            this.musteriekleBtn.Text = "Müşteri Ekle";
-            this.musteriekleBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.musteriekleBtn.UseVisualStyleBackColor = true;
-            //this.musteriekleBtn.Click += new System.EventHandler(this.musteriekleBtn_Click);
             // 
             // timer1
             // 
@@ -390,9 +344,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem mşüşterilerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem muşteriEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem müşteriDüzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem araçlarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otoparkGirişiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem araçOtoparkÇıkışıToolStripMenuItem;
@@ -411,7 +362,6 @@
         private System.Windows.Forms.Button aracotoparkcıkısıBtn;
         private System.Windows.Forms.Button aracotoparkgirisiBtn;
         private System.Windows.Forms.Button musterilisteleBtn;
-        private System.Windows.Forms.Button musteriekleBtn;
         private System.Windows.Forms.ToolStripMenuItem saatToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ImageList ımageList1;

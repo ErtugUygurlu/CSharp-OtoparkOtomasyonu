@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace otoparkOtomasyonu.Classlar
 {
-     class Musteri
+    class Musteri
     {
         public int ID { get; set; }
-        [Column(TypeName ="varchar")]
+        [Column(TypeName = "varchar")]
         public string AdiSoyadi { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(20)]

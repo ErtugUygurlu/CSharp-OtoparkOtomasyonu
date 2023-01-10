@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace otoparkOtomasyonu.Classlar
 {
-     class AracParkBilgileri
+    class AracParkBilgileri
     {
         public int ID { get; set; }
         public int MusteriID { get; set; }
-        [Column(TypeName ="varchar")]
-        
+        [Column(TypeName = "varchar")]
+
         public string AdiSoyadi { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(70)]
